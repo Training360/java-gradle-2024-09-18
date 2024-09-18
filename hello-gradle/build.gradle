@@ -1,8 +1,17 @@
+defaultTasks 'hello'
+
 tasks.register('hello') {
+  dependsOn tasks.intro
   group 'Demo'
   description 'Prints a welcome message.'
   doLast {
     def welcome = project.findProperty('welcome') ?: 'Hello Gradle!'
     println welcome
   }
+}
+
+tasks.register('intro') {
+    doLast {
+        println "I'm Gradle"
+    }
 }
