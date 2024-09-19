@@ -4,6 +4,7 @@ plugins {
     id 'com.github.ben-manes.versions' version '0.51.0'
     id 'com.adarshr.test-logger' version '3.2.0'
     id 'jacoco'
+    id "org.sonarqube" version "5.1.0.4882"
 }
 
 group = 'training'
@@ -37,8 +38,17 @@ test {
 
 jacocoTestReport {
     dependsOn test // tests are required to run before generating the report
+    reports {
+        xml.required = true
+    }
 }
 
 application {
     mainClass = 'training.Main'
+}
+
+sonar {
+    properties {
+        property 'sonar.login', "sqa_5f88dd01da1fda2405e503b0d504b7a6a0fe6950"
+    }
 }
