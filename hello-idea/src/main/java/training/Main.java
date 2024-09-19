@@ -16,7 +16,7 @@ public class Main {
         var employee = new Employee();
         employee.setName("John Doe");
 
-        System.out.println(new Main().sayHello("John Doe"));
+        System.out.println(new Main().sayHello("John Doe 3"));
 
         new Main().writeCodeToFile("John Doe", Path.of("barcode.png"));
     }

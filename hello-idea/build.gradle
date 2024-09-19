@@ -47,6 +47,17 @@ application {
     mainClass = 'training.Main'
 }
 
+jar {
+    manifest {
+        attributes 'Main-Class': 'training.Main'
+    }
+}
+
+task copyDependencies(type: Copy) {
+    from configurations.compileClasspath
+    into 'build/dependencies'
+}
+
 sonar {
     properties {
         property 'sonar.login', "sqa_5f88dd01da1fda2405e503b0d504b7a6a0fe6950"
