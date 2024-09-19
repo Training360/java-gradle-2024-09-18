@@ -15,6 +15,9 @@ public class Main {
     public static void main(String[] args) {
         var employee = new Employee();
         employee.setName("John Doe");
+
+        System.out.println(new Main().sayHello("John Doe"));
+
         new Main().writeCodeToFile("John Doe", Path.of("barcode.png"));
     }
 

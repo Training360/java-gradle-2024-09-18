@@ -1,5 +1,5 @@
 plugins {
-    id 'java'
+    id 'application'
 //    id 'ca.cutterslade.analyze' version '1.10.0'
     id 'com.github.ben-manes.versions' version '0.51.0'
     id 'com.adarshr.test-logger' version '3.2.0'
@@ -37,4 +37,8 @@ test {
 
 jacocoTestReport {
     dependsOn test // tests are required to run before generating the report
+}
+
+application {
+    mainClass = 'training.Main'
 }
