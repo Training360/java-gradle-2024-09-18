@@ -1,3 +1,4 @@
 rootProject.name = 'hello-jakartaee'
 include 'hello-web'
+include 'hello-service'
 
