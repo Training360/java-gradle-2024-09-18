@@ -11,7 +11,11 @@ group = 'training'
 version = '1.0-SNAPSHOT'
 
 repositories {
-    mavenCentral()
+    //mavenCentral()
+    maven {
+        url "http://localhost:8081/repository/maven-public/"
+        allowInsecureProtocol true
+    }
 }
 
 dependencies {
